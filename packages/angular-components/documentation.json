@@ -1,0 +1,272 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [
+        {
+            "name": "LibService",
+            "id": "injectable-LibService-ea4506ad7e74decb7d1e149675f8f11965eb2b8aa4ca43b0f89ba3c39a875042beb6959cfb66b2ccafda92fd0d3f8333071d66cc8ca9de26b3726fac1deafe3f",
+            "file": "projects/lib/src/lib/lib.service.ts",
+            "properties": [],
+            "methods": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class LibService {\n\n  constructor() { }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 6
+            },
+            "type": "injectable"
+        }
+    ],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "HeaderNavigationComponent",
+            "id": "component-HeaderNavigationComponent-2f2fdf94095719f5fea0c841f7af5e0de61ac30fbb3fbc4c5aefe9a153a691679df1df5b4cae01d328c35cff23367c0444b4247eb15204452bb59f747697f36c",
+            "file": "projects/lib/src/lib/header-navigation/header-navigation.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "vz-header-navigation",
+            "styleUrls": [
+                "./header-navigation.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./header-navigation.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'vz-header-navigation',\n  templateUrl: './header-navigation.component.html',\n  styleUrls: ['./header-navigation.component.css']\n})\nexport class HeaderNavigationComponent {\n  title: string = \"\";\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./header-navigation.component.css"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<nav role=\"navigation\">\n  {{ title }}\n  <ul>\n    <li><a routerLink='\".\"' fragment='\"profile\"' class=\"teaser1 actual\" title=\"The Server\">01 <span class=\"hide\">The Server</span></a></li>\n    <li><a routerLink='\".\"' fragment='\"laboral-experience\"' class=\"teaser2\" title=\"The Navigator\">02 <span class=\"hide\">The Navigator</span></a></li>\n    <li><a routerLink='\".\"' fragment='\"skills\"' class=\"teaser3\" title=\"The Fixer\">03 <span class=\"hide\">The Fixer</span></a></li>\n    <li><a routerLink='\".\"' fragment='\"project1\"' class=\"teaser4\" title=\"Project 1\">04 <span class=\"hide\">Project 1</span></a></li>\n    <li><a routerLink='\".\"' fragment='\"project2\"' class=\"teaser5\" title=\"Project\">04 <span class=\"hide\">Project</span></a></li>\n    <li><a routerLink='\".\"' fragment='\"project3\"' class=\"teaser6\" title=\"Project 3\">06 <span class=\"hide\">Project 3</span></a></li>\n   </ul>\n</nav> \n"
+        },
+        {
+            "name": "LibComponent",
+            "id": "component-LibComponent-13d65cd0c51ecfdf084ce1b59c86f90c38f239b1d2e0fb28c336e16cf6f6fba1c7c1a1a6adce55695256834cd489ed37efd9261bc3dd3b4a92ad4045f1e27362",
+            "file": "projects/lib/src/lib/lib.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "vz-lib",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<p>\n  lib works!\n</p>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'vz-lib',\n  template: `\n    <p>\n      lib works!\n    </p>\n  `,\n  styles: [\n  ]\n})\nexport class LibComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": ""
+        }
+    ],
+    "modules": [
+        {
+            "name": "LibModule",
+            "id": "module-LibModule-2400ce0c4cce3295cd9d64542dcd63f9b0402957804cba623f78abe3c74814ef76a240c1f6e89a5a588e1100f34c4c8ff6d52e3006479fe172a95a998da94ba5",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "projects/lib/src/lib/lib.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { LibComponent } from './lib.component';\nimport { HeaderNavigationComponent } from './header-navigation/header-navigation.component';\n\n\n\n@NgModule({\n  declarations: [\n    LibComponent,\n    HeaderNavigationComponent\n  ],\n  imports: [\n  ],\n  exports: [\n    LibComponent\n  ]\n})\nexport class LibModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "HeaderNavigationComponent"
+                        },
+                        {
+                            "name": "LibComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "LibComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/lib/src/lib/header-navigation/header-navigation.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/lib/src/lib/header-navigation/header-navigation.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n  props: args,\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "projects/lib/src/lib/header-navigation/header-navigation.component.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/lib/src/lib/header-navigation/header-navigation.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/lib/src/lib/header-navigation/header-navigation.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n  props: args,\n})"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "projects/lib/src/lib/header-navigation/header-navigation.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/lib/src/lib/header-navigation/header-navigation.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/lib/src/lib/header-navigation/header-navigation.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderNavigationComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/lib/src/lib/lib.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LibComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/lib/src/lib/lib.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "LibService",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            }
+        ]
+    }
+}
