@@ -8,6 +8,18 @@ export default {
   */
   title: 'Components/HeaderNavigation',
   component: HeaderNavigationComponent,
+  argTypes: {
+    title:{
+      control: {
+        type: 'text'
+      }
+    },
+    anchors: {
+      control: {
+        type: 'object'
+      }
+    }
+  },
 } as Meta;
 
 //👇 We create a “template” of how args map to rendering
@@ -16,9 +28,29 @@ const Template: Story = (args) => ({
 });
 
 //👇 Each story then reuses that template
-export const Primary = Template.bind({});
+export const Default = Template.bind({});
 
-Primary.args = {
-  primary: true,
+Default.args = {
   title: 'In this section',
+  anchors: [
+    {
+      title: 'Anchor 1',
+      href: '#anchor1',
+      classes: 'anchor-class',
+      prefixLabel: '',
+      label: 'Anchor 1'
+    }, {
+      title: 'Anchor 1',
+      href: '#anchor2',
+      classes: 'anchor-class',
+      prefixLabel: '001',
+      label: 'Anchor 2'
+    }, { 
+      title: 'Anchor 1',
+      href: '#anchor3',
+      classes: 'active',
+      prefixLabel: '',
+      label: 'Anchor 3'
+    },
+  ]
 };

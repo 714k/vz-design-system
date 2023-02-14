@@ -1,6 +1,12 @@
 {
   "name": "angular-components",
   "version": "0.0.0",
+  "author": "victorZamudio",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@714k"
+  },
+  "repository": "https://github.com/714k/vz-design-system",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

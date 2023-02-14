@@ -31,7 +31,7 @@
     "components": [
         {
             "name": "HeaderNavigationComponent",
-            "id": "component-HeaderNavigationComponent-2f2fdf94095719f5fea0c841f7af5e0de61ac30fbb3fbc4c5aefe9a153a691679df1df5b4cae01d328c35cff23367c0444b4247eb15204452bb59f747697f36c",
+            "id": "component-HeaderNavigationComponent-770eef035529554fea377e30c30a99dfb53e39b4ffafd33f9a534fb16f6abf66cabd9458348890c389ab9dfdd90d8bc5d30e6a5d0665af2dba3c5e7fa264dd41",
             "file": "projects/lib/src/lib/header-navigation/header-navigation.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -51,6 +51,16 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
+                    "name": "anchors",
+                    "defaultValue": "{}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
                     "name": "title",
                     "defaultValue": "\"\"",
                     "deprecated": false,
@@ -69,7 +79,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'vz-header-navigation',\n  templateUrl: './header-navigation.component.html',\n  styleUrls: ['./header-navigation.component.css']\n})\nexport class HeaderNavigationComponent {\n  title: string = \"\";\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'vz-header-navigation',\n  templateUrl: './header-navigation.component.html',\n  styleUrls: ['./header-navigation.component.css']\n})\nexport class HeaderNavigationComponent {\n  title: string = \"\";\n  anchors: object = {};\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -78,7 +88,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<nav role=\"navigation\">\n  {{ title }}\n  <ul>\n    <li><a routerLink='\".\"' fragment='\"profile\"' class=\"teaser1 actual\" title=\"The Server\">01 <span class=\"hide\">The Server</span></a></li>\n    <li><a routerLink='\".\"' fragment='\"laboral-experience\"' class=\"teaser2\" title=\"The Navigator\">02 <span class=\"hide\">The Navigator</span></a></li>\n    <li><a routerLink='\".\"' fragment='\"skills\"' class=\"teaser3\" title=\"The Fixer\">03 <span class=\"hide\">The Fixer</span></a></li>\n    <li><a routerLink='\".\"' fragment='\"project1\"' class=\"teaser4\" title=\"Project 1\">04 <span class=\"hide\">Project 1</span></a></li>\n    <li><a routerLink='\".\"' fragment='\"project2\"' class=\"teaser5\" title=\"Project\">04 <span class=\"hide\">Project</span></a></li>\n    <li><a routerLink='\".\"' fragment='\"project3\"' class=\"teaser6\" title=\"Project 3\">06 <span class=\"hide\">Project 3</span></a></li>\n   </ul>\n</nav> \n"
+            "templateData": "<nav role=\"navigation\" class=\"vz-table-of-contents\">\n  <p>{{ title }}</p>\n  <ul>\n    <li \n      role=\"list\"\n      *ngFor=\"let anchor of anchors\"\n      >\n      <a \n        [routerLink]='\".\"' \n        [fragment]=\"anchor.href\"\n        class=\"anchor.classes\" \n        title=\"anchor.title\">\n        <span class=\"prefix\">{{ anchor.prefixLabel }}</span> \n        <span class=\"label\">{{ anchor.label }}</span>\n      </a>\n    </li>\n   </ul>\n</nav> \n"
         },
         {
             "name": "LibComponent",
@@ -115,13 +125,13 @@
     "modules": [
         {
             "name": "LibModule",
-            "id": "module-LibModule-2400ce0c4cce3295cd9d64542dcd63f9b0402957804cba623f78abe3c74814ef76a240c1f6e89a5a588e1100f34c4c8ff6d52e3006479fe172a95a998da94ba5",
+            "id": "module-LibModule-25481ee45c92d3139d74fca145d881ce5a09bf3929956e58883be79bbef8174580f5472a3957c574f977e5388295edbac8fd66cd0fd41e5ce613226555b7b760",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/lib/src/lib/lib.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { LibComponent } from './lib.component';\nimport { HeaderNavigationComponent } from './header-navigation/header-navigation.component';\n\n\n\n@NgModule({\n  declarations: [\n    LibComponent,\n    HeaderNavigationComponent\n  ],\n  imports: [\n  ],\n  exports: [\n    LibComponent\n  ]\n})\nexport class LibModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\nimport { LibComponent } from './lib.component';\nimport { HeaderNavigationComponent } from './header-navigation/header-navigation.component';\n\n@NgModule({\n  declarations: [\n    LibComponent,\n    HeaderNavigationComponent\n  ],\n  imports: [RouterModule],\n  exports: [\n    LibComponent\n  ]\n})\nexport class LibModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -164,7 +174,7 @@
     "miscellaneous": {
         "variables": [
             {
-                "name": "Primary",
+                "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "projects/lib/src/lib/header-navigation/header-navigation.component.stories.ts",
@@ -190,7 +200,7 @@
         "groupedVariables": {
             "projects/lib/src/lib/header-navigation/header-navigation.component.stories.ts": [
                 {
-                    "name": "Primary",
+                    "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "projects/lib/src/lib/header-navigation/header-navigation.component.stories.ts",
@@ -225,7 +235,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Primary",
+                "name": "Default",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -246,7 +256,7 @@
                 "linktype": "component",
                 "name": "HeaderNavigationComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/2",
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {

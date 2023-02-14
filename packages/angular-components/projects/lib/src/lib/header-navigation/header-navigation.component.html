@@ -1,11 +1,19 @@
-<nav role="navigation">
-  {{ title }}
+<nav role="navigation" class="vz-table-of-contents">
+  <p>{{ title }}</p>
   <ul>
-    <li><a [routerLink]='"."' [fragment]='"profile"' class="teaser1 actual" title="The Server">01 <span class="hide">The Server</span></a></li>
-    <li><a routerLink='"."' fragment='"laboral-experience"' class="teaser2" title="The Navigator">02 <span class="hide">The Navigator</span></a></li>
-    <li><a routerLink='"."' fragment='"skills"' class="teaser3" title="The Fixer">03 <span class="hide">The Fixer</span></a></li>
-    <li><a routerLink='"."' fragment='"project1"' class="teaser4" title="Project 1">04 <span class="hide">Project 1</span></a></li>
-    <li><a routerLink='"."' fragment='"project2"' class="teaser5" title="Project">04 <span class="hide">Project</span></a></li>
-    <li><a routerLink='"."' fragment='"project3"' class="teaser6" title="Project 3">06 <span class="hide">Project 3</span></a></li>
+    <li 
+      role="list"
+      *ngFor="let anchor of anchors"
+      >
+      <a 
+        [routerLink]='"."' 
+        [fragment]="anchor.href"
+        [href]="anchor.href"
+        [class]="anchor.classes" 
+        [title]="anchor.title">
+        <span class="prefix">{{ anchor.prefixLabel }}</span> 
+        <span class="label">{{ anchor.label }}</span>
+      </a>
+    </li>
    </ul>
 </nav> 
